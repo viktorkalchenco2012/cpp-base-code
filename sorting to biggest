@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+void max (short* arr,short len){
+  short max = *arr;
+  for(short i = 0;i<len;i++){
+    if(max < *(arr +i)){
+      max =*(arr+i);
+    }
+  }
+  cout<<endl<<"number"<<endl<<max<<endl;
+}
+int main(){
+  short arr[]={5,3,-9,8,-3};
+  max(arr,5);
+  return 0;
+}
