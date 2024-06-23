@@ -1,0 +1,30 @@
+#include <iostream>
+#include<string>
+#include<fstream>
+using namespace std;
+
+class gun {
+private:
+	float weight;
+public:
+	gun(float weight)
+	{
+		this->weight = weight;
+	}
+};
+class pistol :private gun {
+	string name;
+	friend void get(float weight, string name);
+	pistol(string name) : gun(weight) {
+		this->name = name;
+	}
+};
+void get(float weight, string name)
+{
+	cout << "name:" << name << endl << "weight:" << weight;
+}
+int main()
+{
+	get(2.4f, "mp");
+	return 0;
+}
