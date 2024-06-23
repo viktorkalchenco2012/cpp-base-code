@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+void min (short* arr,short len){
+  short min = *arr;
+  for(short i = 0;i<len;i++){
+    if(min > *(arr +i)){
+      min =*(arr+i);
+    }
+  }
+  cout<<endl<<"number"<<endl<<min<<endl;
+}
+int main(){
+  short arr[]={6,2,-3,9,-2};
+  min(arr,5);
+  return 0;
+}
